@@ -1,5 +1,5 @@
 # Weather Data Pipeline System
-### Option 3 - Advanced Version: Real-Time Monitoring with Alerts and Dashboard
+### Real-Time Monitoring with Alerts and Dashboard
 
 A production-grade, end-to-end data engineering pipeline that extracts live weather data
 from the OpenWeatherMap API, transforms and validates it, loads it into a normalized SQLite
