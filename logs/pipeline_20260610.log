@@ -1,0 +1,384 @@
+2026-06-10 06:42:42 | INFO     | main             | Initialising database...
+2026-06-10 06:42:42 | INFO     | database         | Database setup complete: /home/claude/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 06:42:42 | WARNING  | main             | ============================================================
+2026-06-10 06:42:42 | WARNING  | main             | API key not set!
+2026-06-10 06:42:42 | WARNING  | main             | Set env variable: export OPENWEATHER_API_KEY=your_key
+2026-06-10 06:42:42 | WARNING  | main             | Get a free key at: https://openweathermap.org/api
+2026-06-10 06:42:42 | WARNING  | main             | ============================================================
+2026-06-10 06:42:45 | INFO     | main             | Initialising database...
+2026-06-10 06:42:45 | INFO     | database         | Database setup complete: /home/claude/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 06:42:45 | WARNING  | main             | ============================================================
+2026-06-10 06:42:45 | WARNING  | main             | API key not set!
+2026-06-10 06:42:45 | WARNING  | main             | Set env variable: export OPENWEATHER_API_KEY=your_key
+2026-06-10 06:42:45 | WARNING  | main             | Get a free key at: https://openweathermap.org/api
+2026-06-10 06:42:45 | WARNING  | main             | ============================================================
+2026-06-10 06:42:46 | INFO     | main             | Initialising database...
+2026-06-10 06:42:46 | INFO     | database         | Database setup complete: /home/claude/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 06:42:46 | WARNING  | main             | ============================================================
+2026-06-10 06:42:46 | WARNING  | main             | API key not set!
+2026-06-10 06:42:46 | WARNING  | main             | Set env variable: export OPENWEATHER_API_KEY=your_key
+2026-06-10 06:42:46 | WARNING  | main             | Get a free key at: https://openweathermap.org/api
+2026-06-10 06:42:46 | WARNING  | main             | ============================================================
+2026-06-10 06:42:46 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 06:42:46 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 06:42:46 | WARNING  | monitor          | Health check [data_fresh]: {'status': 'WARNING', 'age_minutes': 1440.2, 'details': 'Last record is 1440 min old (threshold: 90 min)'}
+2026-06-10 06:42:46 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 12:22:43 | INFO     | main             | Initialising database...
+2026-06-10 12:22:43 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 12:22:43 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 12:22:43 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:22:43 | INFO     | etl_pipeline     | Pipeline Run #1 started at 2026-06-10 12:22:43
+2026-06-10 12:22:43 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:22:43 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 12:22:44 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 12:22:46 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 12:22:47 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 12:22:48 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 12:22:50 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 12:22:50 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 12:22:52 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 12:22:53 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 12:22:54 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 12:22:54 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 12:22:54 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 12:22:54 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 12:22:54 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 12:22:54 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 12:22:54 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 43.36 C > 35.0 C
+2026-06-10 12:22:54 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 998 hPa < 1000.0 hPa
+2026-06-10 12:22:54 | WARNING  | etl_pipeline     |   [ALERT][CRITICAL] Bangalore: High wind 16.99 m/s > 15.0 m/s
+2026-06-10 12:22:54 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 36.9 C > 35.0 C
+2026-06-10 12:22:54 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 39.89 C > 35.0 C
+2026-06-10 12:22:54 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 35.97 C > 35.0 C
+2026-06-10 12:22:54 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 39.05 C > 35.0 C
+2026-06-10 12:22:54 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 39.54 C > 35.0 C
+2026-06-10 12:22:54 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 12:22:54 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 12:22:54 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 1, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 8, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 12:22:54 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 12:22:54 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 12:22:54 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 12:22:54 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 12:30:20 | INFO     | main             | Initialising database...
+2026-06-10 12:30:20 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 12:30:20 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 12:30:20 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:30:20 | INFO     | etl_pipeline     | Pipeline Run #2 started at 2026-06-10 12:30:20
+2026-06-10 12:30:20 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:30:20 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 12:30:21 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 12:30:21 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 12:30:22 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 12:30:22 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 12:30:23 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 12:30:25 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 12:30:25 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 12:30:25 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 12:30:26 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 12:30:26 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 12:30:26 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 12:30:26 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 12:30:26 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 12:30:26 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 12:30:26 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 43.36 C > 35.0 C
+2026-06-10 12:30:26 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 998 hPa < 1000.0 hPa
+2026-06-10 12:30:26 | WARNING  | etl_pipeline     |   [ALERT][CRITICAL] Bangalore: High wind 16.99 m/s > 15.0 m/s
+2026-06-10 12:30:26 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 36.9 C > 35.0 C
+2026-06-10 12:30:26 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 39.89 C > 35.0 C
+2026-06-10 12:30:26 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 35.97 C > 35.0 C
+2026-06-10 12:30:26 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 39.05 C > 35.0 C
+2026-06-10 12:30:26 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 39.54 C > 35.0 C
+2026-06-10 12:30:26 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 12:30:26 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 12:30:26 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 2, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 8, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 12:30:26 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 12:30:26 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 12:30:26 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 12:30:26 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 12:35:24 | INFO     | main             | Initialising database...
+2026-06-10 12:35:24 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 12:35:24 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 12:35:24 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:35:24 | INFO     | etl_pipeline     | Pipeline Run #3 started at 2026-06-10 12:35:24
+2026-06-10 12:35:24 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:35:24 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 12:35:24 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 12:35:24 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 12:35:25 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 12:35:25 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 12:35:26 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 12:35:26 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 12:35:27 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 12:35:28 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 12:35:28 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 12:35:28 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 12:35:28 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 12:35:28 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 12:35:28 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 12:35:28 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 12:35:28 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 42.78 C > 35.0 C
+2026-06-10 12:35:28 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 998 hPa < 1000.0 hPa
+2026-06-10 12:35:28 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 36.59 C > 35.0 C
+2026-06-10 12:35:28 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 40.34 C > 35.0 C
+2026-06-10 12:35:28 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 36.1 C > 35.0 C
+2026-06-10 12:35:29 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 39.29 C > 35.0 C
+2026-06-10 12:35:29 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 39.5 C > 35.0 C
+2026-06-10 12:35:29 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 12:35:29 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 12:35:29 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 3, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 7, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 12:35:29 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 12:35:29 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 12:35:29 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 12:35:29 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 12:40:54 | INFO     | main             | Initialising database...
+2026-06-10 12:40:54 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 12:40:54 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 12:40:54 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:40:54 | INFO     | etl_pipeline     | Pipeline Run #4 started at 2026-06-10 12:40:54
+2026-06-10 12:40:54 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:40:54 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 12:40:54 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 12:40:55 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 12:40:55 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 12:40:55 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 12:40:55 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 12:40:56 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 12:40:56 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 12:40:56 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 12:40:56 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 12:40:56 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 12:40:56 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 12:40:56 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 12:40:56 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 12:40:56 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 12:40:56 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 42.78 C > 35.0 C
+2026-06-10 12:40:56 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 998 hPa < 1000.0 hPa
+2026-06-10 12:40:56 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 36.59 C > 35.0 C
+2026-06-10 12:40:56 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 40.34 C > 35.0 C
+2026-06-10 12:40:56 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 36.1 C > 35.0 C
+2026-06-10 12:40:56 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 39.29 C > 35.0 C
+2026-06-10 12:40:56 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 39.5 C > 35.0 C
+2026-06-10 12:40:56 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 12:40:56 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 12:40:56 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 4, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 7, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 12:40:56 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 12:40:56 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 12:40:56 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 12:40:56 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 12:45:48 | INFO     | main             | Initialising database...
+2026-06-10 12:45:48 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 12:45:48 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 12:45:48 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:45:48 | INFO     | etl_pipeline     | Pipeline Run #5 started at 2026-06-10 12:45:48
+2026-06-10 12:45:48 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:45:48 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 12:45:48 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 12:45:48 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 12:45:48 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 12:45:49 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 12:45:49 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 12:45:49 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 12:45:49 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 12:45:49 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 12:45:50 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 12:45:50 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 12:45:50 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 12:45:50 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 12:45:50 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 12:45:50 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 12:45:50 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 42.78 C > 35.0 C
+2026-06-10 12:45:50 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 998 hPa < 1000.0 hPa
+2026-06-10 12:45:50 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 36.65 C > 35.0 C
+2026-06-10 12:45:50 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 40.34 C > 35.0 C
+2026-06-10 12:45:50 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 36.1 C > 35.0 C
+2026-06-10 12:45:50 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 39.29 C > 35.0 C
+2026-06-10 12:45:50 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 39.5 C > 35.0 C
+2026-06-10 12:45:50 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 12:45:50 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 12:45:50 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 5, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 7, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 12:45:50 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 12:45:50 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 12:45:50 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 12:45:50 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 12:47:04 | INFO     | main             | Initialising database...
+2026-06-10 12:47:04 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 12:47:04 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 12:47:04 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:47:04 | INFO     | etl_pipeline     | Pipeline Run #6 started at 2026-06-10 12:47:04
+2026-06-10 12:47:04 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:47:04 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 12:47:04 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 12:47:04 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 12:47:04 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 12:47:05 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 12:47:05 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 12:47:05 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 12:47:05 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 12:47:05 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 12:47:05 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 12:47:05 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 12:47:05 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 12:47:05 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 12:47:05 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 12:47:05 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 12:47:05 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 42.78 C > 35.0 C
+2026-06-10 12:47:05 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 998 hPa < 1000.0 hPa
+2026-06-10 12:47:05 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 36.65 C > 35.0 C
+2026-06-10 12:47:05 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 40.34 C > 35.0 C
+2026-06-10 12:47:05 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 36.1 C > 35.0 C
+2026-06-10 12:47:05 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 39.29 C > 35.0 C
+2026-06-10 12:47:05 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 39.5 C > 35.0 C
+2026-06-10 12:47:05 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 12:47:06 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 12:47:06 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 6, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 7, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 12:47:06 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 12:47:06 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 12:47:06 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 12:47:06 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 12:50:54 | INFO     | main             | Initialising database...
+2026-06-10 12:50:54 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 12:50:54 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 12:50:54 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:50:54 | INFO     | etl_pipeline     | Pipeline Run #7 started at 2026-06-10 12:50:54
+2026-06-10 12:50:54 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 12:50:54 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 12:50:55 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 12:50:55 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 12:50:56 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 12:50:56 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 12:50:56 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 12:50:56 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 12:50:56 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 12:50:57 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 12:50:57 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 12:50:57 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 12:50:57 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 12:50:57 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 12:50:57 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 12:50:57 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 12:50:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 42.78 C > 35.0 C
+2026-06-10 12:50:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 998 hPa < 1000.0 hPa
+2026-06-10 12:50:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 36.65 C > 35.0 C
+2026-06-10 12:50:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 40.34 C > 35.0 C
+2026-06-10 12:50:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 36.1 C > 35.0 C
+2026-06-10 12:50:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 39.29 C > 35.0 C
+2026-06-10 12:50:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 39.5 C > 35.0 C
+2026-06-10 12:50:57 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 12:50:57 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 12:50:57 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 7, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 7, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 12:50:57 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 12:50:57 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 12:50:57 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 12:50:57 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 14:05:25 | INFO     | main             | Initialising database...
+2026-06-10 14:05:25 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 14:05:25 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | Pipeline Run #8 started at 2026-06-10 14:05:25
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 14:05:25 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 43.97 C > 35.0 C
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 997 hPa < 1000.0 hPa
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][CRITICAL] Bangalore: High wind 15.2 m/s > 15.0 m/s
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 37.71 C > 35.0 C
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 40.71 C > 35.0 C
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: Low pressure 999 hPa < 1000.0 hPa
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 36.48 C > 35.0 C
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 41.55 C > 35.0 C
+2026-06-10 14:05:25 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 40.61 C > 35.0 C
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 14:05:25 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 8, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 9, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 14:05:25 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 14:05:25 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 14:05:25 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 14:05:25 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 14:11:46 | INFO     | main             | Initialising database...
+2026-06-10 14:11:46 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 14:11:46 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | Pipeline Run #9 started at 2026-06-10 14:11:46
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 14:11:46 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 44.91 C > 35.0 C
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 996 hPa < 1000.0 hPa
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][CRITICAL] Bangalore: High wind 15.2 m/s > 15.0 m/s
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 38.18 C > 35.0 C
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 40.56 C > 35.0 C
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: Low pressure 997 hPa < 1000.0 hPa
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 35.02 C > 35.0 C
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 41.55 C > 35.0 C
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 41.32 C > 35.0 C
+2026-06-10 14:11:46 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: Low pressure 999 hPa < 1000.0 hPa
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 14:11:46 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 9, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 10, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 14:11:46 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 14:11:46 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 14:11:46 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 14:11:46 | INFO     | monitor          | Health check [log_dir]: OK
+2026-06-10 14:16:57 | INFO     | main             | Initialising database...
+2026-06-10 14:16:57 | INFO     | database         | Database setup complete: /Users/abhinav/Documents/The Developers Arena Internship/Project - 3/weather_pipeline/src/../config/../database/weather_data.db
+2026-06-10 14:16:57 | INFO     | main             | Running one-shot ETL pipeline...
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | Pipeline Run #10 started at 2026-06-10 14:16:57
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | ============================================================
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | [EXTRACT] Fetching data for 10 cities...
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Mumbai
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Delhi
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Bangalore
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Chennai
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Kolkata
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Hyderabad
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Pune
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Ahmedabad
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Jaipur
+2026-06-10 14:16:57 | INFO     | etl_pipeline     |   [OK] Extracted: Surat
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | Extract complete: 10/10 cities fetched
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | [TRANSFORM] Validating and enriching records...
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | Transform complete: 10 valid, 0 invalid
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | [ALERTS] Checking thresholds...
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: High temp 44.91 C > 35.0 C
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Delhi: Low pressure 996 hPa < 1000.0 hPa
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Chennai: High temp 38.18 C > 35.0 C
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: High temp 40.56 C > 35.0 C
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Kolkata: Low pressure 997 hPa < 1000.0 hPa
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Hyderabad: High temp 35.02 C > 35.0 C
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Ahmedabad: High temp 41.55 C > 35.0 C
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: High temp 41.32 C > 35.0 C
+2026-06-10 14:16:57 | WARNING  | etl_pipeline     |   [ALERT][WARNING] Jaipur: Low pressure 999 hPa < 1000.0 hPa
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | [LOAD] Writing to database...
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | Load complete: 10 records inserted
+2026-06-10 14:16:57 | INFO     | etl_pipeline     | Pipeline complete: {'run_id': 10, 'cities_fetched': 10, 'records_inserted': 10, 'alerts_triggered': 9, 'errors': None, 'status': 'SUCCESS'}
+2026-06-10 14:16:57 | INFO     | monitor          | Health check [database]: OK
+2026-06-10 14:16:57 | INFO     | monitor          | Health check [disk_space]: OK
+2026-06-10 14:16:57 | INFO     | monitor          | Health check [data_fresh]: OK
+2026-06-10 14:16:57 | INFO     | monitor          | Health check [log_dir]: OK
